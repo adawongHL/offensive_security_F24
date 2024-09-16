@@ -14,6 +14,8 @@ The following instructions set up a Dockerized solution for emulating the exact 
 	4. `offsec` is the image name, which we defined in the previous command
 	5. `bash` spawns `/bin/bash` for us upon entry to the container
 7. Feel free to experiment with `-v $(pwd):/root`, which mounts the current directory of your host machine to `~/` in the container. This is really helpful for loading binaries that we download from the class site into the container so we can run and operate on them.
+	1. Which turns your  complete build command to:
+		1. `docker run --rm -it --platform linux/amd64 -v $(pwd):/root offsec bash`
 
 With this setup, we can easily spin up a container and start writing solver scripts. We can also run the binaries, which is extremely helpful. _If you get a `Permission denied` error, try adjusting the file permissions with `chmod +x <filename>`_.
 
