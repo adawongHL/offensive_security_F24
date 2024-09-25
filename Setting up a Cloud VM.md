@@ -40,7 +40,7 @@ Finish the installation and wait for the VM to boot. You can use the AWS EC2 con
 
 Before doing anything else on your VM, run `sudo apt-get update && sudo apt-get upgrade`. This will take a minute to update, but it is essential before trying to install other programs from the package manager.
 
-After it completes, you can install utilities like `sudo apt-get install -y python3-pip gdb`, and `pip3 install pwntools`. You can use `scp <file> ubuntu@<ip of vm>:~/`  to move files from your local computer to the `~/` directory of the VM (use the `-r` flag for directories of files).
+After it completes, you can install utilities like `sudo apt-get install -y python3-pip gdb`, and `pip3 install pwntools`. You can use `scp <file> ubuntu@<ip of vm>:~/`  to move files from your local computer to the `~/` directory of the VM (use the `-r` flag for directories of files).u
 
 #### Configuring the KeyPair on macOS
 

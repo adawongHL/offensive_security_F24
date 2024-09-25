@@ -7,7 +7,7 @@ To install and run the NYU VPN on a Digital Ocean Droplet, AWS VM, GCP instance,
 > The Duo MFA push in headless mode defaults to your default device. For someone (like myself) that has changed devices since originally registering the Duo account, this may be a device that is no longer accessible. Follow [these instructions](https://nyu.service-now.com/sp?id=kb_article&sysparm_article=KB0018788&sys_kb_id=2cd8244b1bf82490a54ffdd51a4bcb2f&spa=1) to update and remove old devices so that the default option is a device you own and have access to. _If you do not do this, the login prompt will hang before eventually timing out_.
 
 1. [Install openconnect](https://gist.github.com/marshki/834d8b6f19c69b189df1e6b5b2aba428). For Debian and Ubuntu hosts, the command is `sudo apt-get install openconnect network-manager-openconnect network-manager-openconnect-gnome`
-2. Run `sudo openconnect --background --user <NetID> vpnsec.nyu.edu`  with your NetID
+2. Run `sudo openconnect --background --user <NetID> vpnsec.nyu.edu` with your NetID
 3. In the first `password` prompt, enter your NYU password
 4. In the second `password` prompt, enter "push" to send a Duo Push
 5. Approve the push on your device. _If this hangs and times out, see the note in the block quote above_
