@@ -1,3 +1,9 @@
+# Links
+- [Debugging Guide Stanford](https://web.stanford.edu/class/archive/cs/cs107/cs107.1252/resources/debugging.html)
+- [GDB Guide Stanford](https://web.stanford.edu/class/archive/cs/cs107/cs107.1252/resources/gdb)
+- 
+
+
 # Tools
 
 - pwntools
