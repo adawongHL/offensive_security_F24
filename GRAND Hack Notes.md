@@ -1,4 +1,4 @@
-# Links
+ # Links
 - [Debugging Guide Stanford](https://web.stanford.edu/class/archive/cs/cs107/cs107.1252/resources/debugging.html)
 - [GDB Guide Stanford](https://web.stanford.edu/class/archive/cs/cs107/cs107.1252/resources/gdb)
 - 
@@ -39,6 +39,15 @@
 Goal: we have the compiled binary of a program. We want to exploit this binary somehow. e.g. to get protected info through digging through the binary
 
 ## Big-Pic, Mental Models
+- Function calls: stack
+Let's say we're within main(), and main() calls another function called A()
+At first, this is handled by the `call` assembly instruction.
+On the stack:
+- `call` the current instruction ptr gets pushed onto the stack. This is the return addr (original next instruction to be executed after we return to main from A
+- `call` updates instruction ptr to be the entry point of A()
+- A: push the current rbp onto stack. This is the base ptr of main's stack frame. Done such that we know where main's stack frame is when we return to main
+- A: update rbp <-- rsp; set stack base ptr to equal to current top of stack. Base of A's stack frame is now defined correctly
+- B: decrement rsp to grow A's stack frame, allowing enough space to house local variables and passed-in arguments (already in )
 
 
 
